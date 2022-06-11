@@ -1,0 +1,21 @@
+.wrapper .container{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+  }
+  h3{
+    color: #474747;
+    font-size: 24px;
+  }
+  .oursbutton{
+    border-radius: 4px;
+    color: #049A01;;
+    border: 1px solid #F0FFEE;
+  }
+  @media screen and (max-width: 940px){
+  .wrapper .container{
+      grid-template-columns: 1fr;
+      margin: 1rem 0;
+  }
+}

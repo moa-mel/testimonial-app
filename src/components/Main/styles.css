@@ -1,0 +1,46 @@
+.main  {
+    background-color: #25201D;
+    padding: 5rem 0;
+}
+
+.main .container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.main .col {
+    display: flex;
+    flex-direction: column;
+    color: #FFFFFF;
+}
+.main .row{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    color:#25201D;
+}
+
+.main a {
+    font-size: 1rem;
+}
+
+.main .icon {
+    color: #303030;
+    margin-right: 4px;
+}
+
+.main h5 {
+    margin-top: 2rem;
+}
+
+@media screen and (max-width: 940px) {
+    .main .container {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .main .col-1 {
+        display: none;
+    }
+}

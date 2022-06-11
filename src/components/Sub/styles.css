@@ -1,0 +1,47 @@
+.sub .container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 4rem auto;
+    justify-content: center;
+    background-color: #25201D;
+    align-items: center;
+    padding: 1rem;
+  }
+  .sub .left{
+    padding: 1rem;
+  }
+  h1{
+    font-size: 3.0rem;
+    line-height: 1.2;
+  }
+  .sub h1{
+    padding: 1rem 0;
+  }
+  .ourbutton{
+      border-radius: 4px;
+      color: #242120;
+     
+      background-color: #FFFFFF;
+  }
+  .sub .mystory{
+      color:#FF5C00 ;
+  }
+  .sub .right{
+    padding: 1rem;
+    color: #FFFFFF;
+  }
+  .sub .img-container{
+    width: 100%;
+    display: flex;
+  }
+  .sub img{
+    max-width: 80%;
+    margin: auto;
+  }
+  
+  @media screen and (max-width: 940px){
+    .sub .container{
+        grid-template-columns: 1fr;
+        margin: 1rem 0;
+    }
+  }

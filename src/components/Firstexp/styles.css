@@ -1,0 +1,47 @@
+.Firstexp .container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 4rem auto;
+    justify-content: center;
+    background-color: black;
+    align-items: center;
+    padding: 1rem;
+  }
+  .Firstexp .left{
+    padding: 1rem;
+  }
+  .firstexpImage{
+    border-radius: 50%;
+    background: #2E2E2E;
+  }
+  h1{
+    font-size: 3.0rem;
+    line-height: 1.2;
+  }
+  .Firstexp h1{
+    padding: 1rem 0;
+  }
+  button{
+      border-radius: 4px;
+      border: 1px solid rgba(255, 255, 255, 0.4);
+  }
+  
+  .Firstexp .right{
+    padding: 1rem;
+    color: #FFFFFF;
+  }
+  .Firstexp .img-container{
+    width: 100%;
+    display: flex;
+  }
+  .Firstexp img{
+    max-width: 80%;
+    margin: auto;
+  }
+  
+  @media screen and (max-width: 940px){
+    .Firstexp .container{
+        grid-template-columns: 1fr;
+        margin: 1rem 0;
+    }
+  }

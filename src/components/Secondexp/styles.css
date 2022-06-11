@@ -1,0 +1,46 @@
+.Secondexp .container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 4rem auto;
+    justify-content: center;
+    background-color: #FFF8F5;
+    align-items: center;
+    padding: 1rem;
+  }
+  .Secondexp .left{
+    padding: 1rem;
+  }
+  h1{
+    font-size: 3.0rem;
+    line-height: 1.2;
+  }
+  .Secondexp h1{
+    padding: 1rem 0;
+  }
+  .mybutton{
+      border-radius: 4px;
+      color: #FF5C00;
+      border: 1px solid rgba(255, 92, 0, 0.4);
+  }
+  .Secondexp .mystory{
+      color:#FF5C00 ;
+  }
+  .Secondexp .right{
+    padding: 1rem;
+    
+  }
+  .Secondexp .img-container{
+    width: 100%;
+    display: flex;
+  }
+  .Secondexp img{
+    max-width: 80%;
+    margin: auto;
+  }
+  
+  @media screen and (max-width: 940px){
+    .Secondexp .container{
+        grid-template-columns: 1fr;
+        margin: 1rem 0;
+    }
+  }
