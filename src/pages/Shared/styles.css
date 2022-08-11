@@ -27,3 +27,11 @@
     background-color: #FFF8F5;
     padding: 1rem;
  }
+ @media screen and (max-width: 940px){
+   .shared .container {
+      width: 100%;
+   }
+   .shared{
+      width: 100%;
+   }
+ }

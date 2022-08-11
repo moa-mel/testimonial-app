@@ -1,5 +1,6 @@
 import React from 'react'
 import "./styles.css"
+import Button from '../Button'
 import {Link} from 'react-router-dom'
 import Logo from "../../images/Vasiti-Logo-black 1.png"
 
@@ -24,9 +25,9 @@ const Header = () => {
     <a >LOG IN</a>
     </li>
     <li>
-    <button className="btn">
+    <Button>
     SIGN UP
-    </button>
+    </Button>
     </li>
     </ul>
     </div>

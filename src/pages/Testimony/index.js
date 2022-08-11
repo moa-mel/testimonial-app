@@ -1,21 +1,34 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import './styles.css'
-import {Link} from 'react-router-dom'
+import {useDispatch} from 'react-redux'
+import { v4 as uuidv4 } from 'uuid';
+import {addStory} from "../../features/storySlice"
+import Button from "../../components/Button"
+import { useNavigate } from 'react-router-dom';
 
 const Testimony = () =>{
+  const dispatch =useDispatch()
+    const navigate = useNavigate()
     const [selectedFile, setSelectedFile] = useState("")
-    const [stories, setStories] = useState("")
-    const submitHandler = (e) => {
-        e.preventDefault();
-        setStories("");
-      };
+   const [values, setValues] = useState({
+    word: ''
+   })
+
+   const handleAddWord = () =>{
+    setValues({word:''})
+    dispatch(addStory({
+      id: uuidv4(),
+      word: values.word
+    }))
+    navigate('/shared')
+   }
 
     return (
         <div className='testimony'>
         <div className='container'>
         <div className='card'>
         <h2>Share your amazing story!</h2>
-        <form className='contained' onSubmit={submitHandler}>
+        <form className='contained' >
         <label>
         Upload your Picture
         </label>
@@ -47,8 +60,11 @@ const Testimony = () =>{
         <label>Share your story</label>
         <br/>
         <textarea rows="4" cols="40"
-        value={stories}
-        onChange={(e) => {setStories(e.target.value)}}
+        placeholder=''
+        name="stories"
+        value={values.word}
+        onChange={(e) => setValues({ ...values, word: e.target.value })}
+        type='text'
         ></textarea>
         </div>
         <br/>
@@ -63,13 +79,11 @@ const Testimony = () =>{
         <label>City or Higher Institution (for Students)</label>
        <input type='text' className=' w-4/5 cursor-pointer px-8 ' />
        </div>
-       <br/>
-       <Link to='/shared'>
-        <button className="btns">
-        Share your story!
-        </button>
-        </Link>
         </form>
+        <br/>
+        <Button onClick={handleAddWord}>
+        Share your story!
+        </Button>
         </div>
         </div>
         </div>

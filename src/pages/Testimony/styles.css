@@ -47,14 +47,22 @@ h2{
   textarea{
     border: 1px solid  #EAEAEA;
   }
-  .btns{
-    padding: 7px 24px;
-    border: 1px solid #FF5C00;
-    background-color: #FF5C00;
-    color: #fff;
-    border-radius: 8px 4px;
-    font-size: 1.1rem;
-    font-weight: 600;
-    cursor: pointer;
-    margin-left: 270px;
+  @media screen and (max-width: 940px){
+    .testimony .container {
+      width: 100%;
+    }
+    .testimony{
+      width: 100%; 
+    }
+    .btns{
+      width: 100%; 
+      background-color: #FF5C00;
+      color: #fff;
+    }
+    textarea{
+      width: 100%; 
+    }
+    input{
+      width: 100%; 
+    }
   }

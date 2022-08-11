@@ -1,10 +1,18 @@
 import React from 'react'
 import './styles.css';
+import {useSelector} from 'react-redux'
 import Hurray from "../../images/🎉.png"
-import StoriesList from '../../components/StoriesList';
+import Button from "../../components/Button"
 
   const Shared = () => {
-    
+    const stories = useSelector(store=> store.stories)
+
+     const renderCard = () => stories?.map(story => (
+      <div key={story.id}>
+        <p>{story.word}</p>
+      </div>
+     ))
+  
     return (
         <div className='shared'>
         <div className='container'>
@@ -15,11 +23,13 @@ import StoriesList from '../../components/StoriesList';
         
         <h1>Thank you for <br/>
         sharing your story </h1>
-       <p></p>
-        <br/>
-        <button className="btn">
+        
+       {stories.length ? renderCard() : <p>No Story</p>}
+       
+       <br/>
+        <Button>
         Close
-        </button>
+        </Button>
         </div>
         </div>
         </div>
